@@ -12,7 +12,7 @@ Les fichiers contenants les automates se situent dans le répertoire `data/`, un
 * Les lignes suivantes contiennent les transitions (une par ligne) suivant la forme `<etatDepart> <caractere> <etatFin>`
 * L'état initial doit se nommer **I** et les états finaux doivent se nommer **F** suivi d'un chiffre (<u>ex:</u> F0)
 
-[Mon github](https://github.com/Sedpower)
+[Retrouver le code sur github](https://github.com/Sedpower/Automaton)
 
 -------
 
@@ -27,3 +27,5 @@ The files containing automatas are located in the `data/` directory, an automa f
 * Second line contains all alphabet elements separated by a single space (if you need to put space element, put `space`, it will be converted by space character)
 * Others lines contains transitions (on per line), following this form `<startingSate> <character> <endingState>`
 * Inital state must be named **I** and final states must be named **F** followed by number (<u>ex:</u> F0)
+
+[Find this code on github](https://github.com/Sedpower/Automaton)
