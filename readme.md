@@ -26,7 +26,7 @@ Les fichiers contenants les automates se situent dans le répertoire `data/`, un
 
 To compile the code, you need to execute `javac -cp ./class/ -d ./class/ ./src/*.java ./src/*/*.java` command from root folder `Automaton/`
 
-_Normally the code is already compiled in the `class /` folder_
+_Normally the code is already compiled in the `class/` folder_
 
 ### Launch app
 To launch the app, execute `java MyAppli` command in `class/` folder
