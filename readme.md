@@ -1,5 +1,11 @@
 # AUTOMATA
 
+### Compiler
+
+Pour compiler le code, il suffit d’exécuter la commande `javac -cp ./class/ -d ./class/ ./src/*.java ./src/*/*.java` depuis le répertoire source du projet `Automaton/`
+
+_Normalement le code est déjà compilé dans le dossier `class/`_
+
 ### Lancer l'application
 Pour lancer l'application, exécuter la commande `java MyAppli` dans le répertoire `class/`
 
@@ -16,10 +22,16 @@ Les fichiers contenants les automates se situent dans le répertoire `data/`, un
 
 -------
 
+### Compile
+
+To compile the code, you need to execute `javac -cp ./class/ -d ./class/ ./src/*.java ./src/*/*.java` command from root folder `Automaton/`
+
+_Normally the code is already compiled in the `class /` folder_
+
 ### Launch app
 To launch the app, execute `java MyAppli` command in `class/` folder
 
-### Information utiles
+### Usefull informations
 `doc/` folder contain generated app Javadoc
 
 The files containing automatas are located in the `data/` directory, an automa file follows a precise formalism:

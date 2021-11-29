@@ -21,7 +21,8 @@ public class MyAppli {
     public static void main(String[] args) throws IOException {
         while (true) {
             displayMenu();
-            String input = getInput("Entrez votre choix : ");
+            String input = getInput("Enter your choice : ").toLowerCase();
+
             switch (input) {
                 case "1":
                     exprProcess(ReadAutomata.readAutomata("smiley.txt"));
@@ -46,6 +47,8 @@ public class MyAppli {
                     exprProcess(ReadAutomata.readAutomata("polynome.txt"));
                     break;
                 case "9":
+                case "exit":
+                case "quit":
                     System.exit(0);
             }
         }
@@ -78,16 +81,16 @@ public class MyAppli {
         boolean exit = false;
         while (!exit) {
             clear();
-            System.out.println("Pour retourner au menu, tapez \"exit\"\n");
-            String input = getInput("Entrez l'expression : ");
+            System.out.println("To return to the menu, type \"exit\"\n");
+            String input = getInput("Type the expression : ");
             if (input.equalsIgnoreCase("exit") ) {
                 exit = true;
             } else {
                 boolean isRecognized = automata.recognized(input);
                 if (isRecognized) {
-                    System.out.println(ANSI_GREEN + "'"+ input +"' est reconnu par l'automate" + ANSI_RESET);
+                    System.out.println(ANSI_GREEN + "'"+ input +"' is recognized" + ANSI_RESET);
                 } else {
-                    System.out.println(ANSI_RED + "'"+ input +"' n'est pas reconnu par l'automate" + ANSI_RESET);
+                    System.out.println(ANSI_RED + "'"+ input +"' is not recognized" + ANSI_RESET);
                 }
                 try {
                     TimeUnit.SECONDS.sleep(2);
@@ -103,18 +106,18 @@ public class MyAppli {
      */
     private static void displayMenu() {
         clear();
-        System.out.println("--------------- Menu de mon TP -------------------------");
-        System.out.println("1. Smiley (pour reconnaitre un des smileys)");
-        System.out.println("2. HH:MM (pour reconnaitre une heure bien formée)");
+        System.out.println("------------------------- Menu -------------------------");
+        System.out.println("1. Smiley (To recognize a smiley)");
+        System.out.println("2. HH:MM (To recognize a firm hour)");
         System.out.println("3. JJ/MM/AAAA");
         System.out.println("4. HH :MM :SS");
-        System.out.println("5. Adresses electroniques");
+        System.out.println("5. E-mail");
         System.out.println("6. <automata>");
         System.out.println("7. <automata>");
-        System.out.println("8. Polynôme");
-        System.out.println("9. Arrêt");
-        System.out.println("Votre choix (1-9) ?");
-        System.out.println("Je vous demanderez ensuite la chaine à analyser, Merci");
-        System.out.println("-------------------------------------------------------");
+        System.out.println("8. Polynom");
+        System.out.println("9. Stop");
+        System.out.println("Your choice (1-9) ?");
+        System.out.println("Then, I will ask you to enter a string to analyze it");
+        System.out.println("--------------------------------------------------------");
     }
 }
